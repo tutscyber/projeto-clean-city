@@ -1,0 +1,481 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f4;
+    color: #1f2937;
+}
+
+/* LOGIN */
+
+.login {
+    width: 380px;
+    margin: 120px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.login h1 {
+    color: #2f8f46;
+    margin-bottom: 25px;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login button {
+    width: 100%;
+}
+
+/* LAYOUT */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 235px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #2d3740, #111827);
+    color: white;
+    padding: 24px 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    margin: 0 0 35px 0;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.sidebar a {
+    display: block;
+    color: #e5e7eb;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.14);
+    transform: translateX(4px);
+}
+
+.botao-sair {
+    margin-top: 30px;
+    background: #dc2626;
+    width: 100%;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    margin-left: 235px;
+    padding: 28px;
+    width: calc(100% - 235px);
+}
+
+.conteudo h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: #111827;
+}
+
+.conteudo h2 {
+    color: #1f2937;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topo p {
+    color: #6b7280;
+}
+
+/* PAINÉIS */
+
+.painel {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+    margin-bottom: 22px;
+}
+
+/* CARDS */
+
+.cards-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.card-info {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+    border-left: 5px solid #2f8f46;
+    transition: 0.2s;
+}
+
+.card-info:hover {
+    transform: translateY(-4px);
+}
+
+.icone {
+    font-size: 36px;
+}
+
+.card-info p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.card-info h2 {
+    margin: 5px 0;
+    font-size: 32px;
+}
+
+.card-info small {
+    color: #9ca3af;
+}
+
+/* FORMULÁRIOS */
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: #2f8f46;
+    box-shadow: 0 0 0 3px rgba(47,143,70,0.12);
+}
+
+.formulario,
+.formulario-usuarios,
+.formulario-caminhao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+/* BOTÕES */
+
+button {
+    background: #2f8f46;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #26773a;
+    transform: translateY(-1px);
+}
+
+.botao-excluir {
+    background: #dc2626;
+    margin-left: 8px;
+}
+
+.botao-excluir:hover {
+    background: #b91c1c;
+}
+
+.botao-cancelar {
+    background: #6b7280;
+}
+
+.botao-cancelar:hover {
+    background: #4b5563;
+}
+
+.botao-resolver {
+    background: #16a34a;
+}
+
+/* TABELAS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th {
+    text-align: left;
+    padding: 14px;
+    color: #374151;
+    font-size: 14px;
+}
+
+td {
+    padding: 14px;
+    border-top: 1px solid #e5e7eb;
+    color: #374151;
+}
+
+tr:hover td {
+    background: #f9fafb;
+}
+
+/* DASHBOARD */
+
+.area-meio {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.grafico-area {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    min-height: 250px;
+}
+
+.donut {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.donut::after {
+    content: '';
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    background: white;
+    border-radius: 50%;
+    top: 36px;
+    left: 36px;
+}
+
+.legenda p {
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.verde-box,
+.amarelo-box,
+.vermelho-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+.verde-box {
+    background: #2f8f46;
+}
+
+.amarelo-box {
+    background: #e7b75f;
+}
+
+.vermelho-box {
+    background: #e75b4c;
+}
+
+/* ALERTAS */
+
+.topo-alertas {
+    margin-bottom: 20px;
+}
+
+.abas-alertas {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+.aba {
+    background: transparent;
+    color: #555;
+    padding: 10px 0;
+    border-radius: 0;
+}
+
+.aba:hover {
+    background: transparent;
+    color: #111;
+}
+
+.aba.ativa {
+    color: #111;
+    border-bottom: 3px solid #2f8f46;
+}
+
+.badge-alerta {
+    background: #fff0d6;
+    color: #b7791f;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.badge-resolvido {
+    background: #dcfce7;
+    color: #166534;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.badge-admin {
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.badge-motorista {
+    background: #dcfce7;
+    color: #166534;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.icone-acao {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* COLETA E CAMINHÕES */
+
+.coleta-grid,
+.motorista-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.info-coleta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.info-coleta p {
+    margin: 0;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.rota-info,
+.motorista-rota {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.card-motorista {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-motorista:hover {
+    transform: scale(1.02);
+}
+
+.card-motorista.ativo {
+    border: 2px solid #2f8f46;
+    background: #ecfdf3;
+}
+
+/* MAPAS */
+
+.leaflet-container {
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* MENSAGENS */
+
+.mensagem-vazia,
+.sem-alertas {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .cards-dashboard,
+    .area-meio,
+    .coleta-grid,
+    .motorista-grid {
+        grid-template-columns: 1fr;
+    }
+}
